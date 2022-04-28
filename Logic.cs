@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NSGOWinFormsApp
 {
-    internal class Logic
+    public class Logic
     {
         /// <summary>
         /// Displays a dialog box that prompts the user to select an XML file. The file is then read and its contents returned as a string.
@@ -71,16 +71,17 @@ namespace NSGOWinFormsApp
         /// Accepts the string from GetFileContent() and returns its subtitles as strings in a list.
         /// </summary>
         // TODO: Consider bundling IsValid() and GetSubtitleList() in GetFileContent().
+
         public static List<string> GetSubtitleList(string content)
         {
             string result = string.Empty;
             List<string> resultsList = new();
 
-            // Visit each character.
-            for (int i = 0; i < content.Length; i++)
+            // Visit each character, beginning with the 4th (avoids IndexOutOfRangeExceptions)
+            for (int i = 4; i < content.Length; i++)
             {
                 // If we're in an opening span tag...
-                int neg4 = i - 4; int neg3 = i - 3; int neg2 = i - 2; int neg1 = i - 1;
+                int neg4 = i - 4, neg3 = i - 3, neg2 = i - 2, neg1 = i - 1;
                 if (content[i] == ' ' && content[neg4] == 's' && content[neg3] == 'p' && content[neg2] == 'a' && content[neg1] == 'n')
                 {
                     // Advance through it to the subtitles.

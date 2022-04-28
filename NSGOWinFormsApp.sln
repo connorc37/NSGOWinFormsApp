@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSGOWinFormsApp", "NSGOWinFormsApp.csproj", "{0B2FE174-A2F9-4E36-BB49-119C9A113F7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NSGOWinFormsApp", "NSGOWinFormsApp.csproj", "{0B2FE174-A2F9-4E36-BB49-119C9A113F7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NSGOWinFormsAppTests", "..\NSGOWinFormsAppTests\NSGOWinFormsAppTests.csproj", "{FD0A9D16-378A-45E8-BA0A-0907015C884D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0B2FE174-A2F9-4E36-BB49-119C9A113F7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B2FE174-A2F9-4E36-BB49-119C9A113F7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B2FE174-A2F9-4E36-BB49-119C9A113F7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD0A9D16-378A-45E8-BA0A-0907015C884D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0A9D16-378A-45E8-BA0A-0907015C884D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0A9D16-378A-45E8-BA0A-0907015C884D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0A9D16-378A-45E8-BA0A-0907015C884D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

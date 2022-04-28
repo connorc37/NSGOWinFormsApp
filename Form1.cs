@@ -26,6 +26,7 @@ namespace NSGOWinFormsApp
                 MessageBox.Show("This file contains an uneven number of opening and closing tags.\n"
                               + "As a result, its contents may not display appropriately.", "Warning");
             }
+
             // Assign the string's subtitles to a list and display them in the listBox.
             subtitleList = Logic.GetSubtitleList(fileContent);
             foreach (string s in subtitleList)
