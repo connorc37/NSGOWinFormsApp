@@ -1,8 +1,8 @@
 ## About
 
-TL;DR: Accepts Netflix's subtitle files and displays their subtitles in a RichTextBox.
+TL;DR: Accepts the files Netflix stores their subtitles in and displays the subtitles in a RichTextBox.
 
-Aimed at students taking notes on Netflix documentaries, this app allows users to open Netflix's subtitle files and highlight the subtitles they feel are important as their videos play. The highlighted subtitles are then displayed in a RichTextBox, alongside all the subtitles, where the text can be copied and pasted into the user's word processor of choice. Click [here](https://youtu.be/k7dmjbZew_I) for a soothing 5-minute explanation/demo or [here](https://youtu.be/sYYzmlp5SRY) for a silent UI demo.
+Aimed at students taking notes while watching Netflix documentaries, this app allows users to open the files containing their video's subtitles and highlight the subtitles they feel are important as they watch their videos. The highlighted subtitles are then displayed over all the subtitles in a RichTextBox, where the information can be copied and then pasted into the user's word processor of choice. Click [here](https://youtu.be/k7dmjbZew_I) for a soothing 5-minute explanation/demo or [here](https://youtu.be/sYYzmlp5SRY) for a silent UI demo.
 
 ## How to Use
 

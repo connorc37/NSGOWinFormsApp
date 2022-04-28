@@ -11,7 +11,7 @@ namespace NSGOWinFormsApp
         /// <summary>
         /// Displays a dialog box that prompts the user to select an XML file. The file is then read and its contents returned as a string.
         /// </summary>
-        /* TODO: Filter acceptable files sooner?
+        /* TODO: Filter acceptable files sooner.
          * The file we want has no extension, and while 'openFileDialog1.Filter' is capable of setting the file name
          * filter string, setting it to "", null, or String.Empty essentially says "no filter" rather than "no extension".
          * https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.filedialog.filter?view=windowsdesktop-6.0 */
@@ -23,7 +23,7 @@ namespace NSGOWinFormsApp
             using OpenFileDialog openFileDialog1 = new();
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                // Ensure the extension is appropriate.
+                // Ensure the extension is appropriate and restart if it isn't.
                 string path = Path.GetExtension(openFileDialog1.FileName);
                 if (path != "" && path != ".txt")
                 {
@@ -105,40 +105,6 @@ namespace NSGOWinFormsApp
         /// <summary>
         /// Accepts the ListBox's items and selected items, adds them to a queue, and returns it.
         /// </summary>
-        /* TODO: Change priority queue to queue.
-         * The idea was to assign selected subtitles higher priorities, but the PriorityQueue introduced in .NET 6 doesn't guarantee FIFO semantics
-         * for elements of equal priority. That means the unselected subtitles are displayed in an order that's close to correct, but isn't. The 
-         * workaround implemented was to assign every subtitle its own priority, but there's no advantage to that vs. implementing a queue, and there's 
-         * no significant advantage to using a queue vs. the list already in place.
-         * https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2?view=net-6.0 */
-
-        /*
-        internal static PriorityQueue<string, int> AddToQueue(ListBox.SelectedObjectCollection selectedItems, ListBox.ObjectCollection items)
-        {
-            PriorityQueue<string, int> subtitleQueue = new PriorityQueue<string, int>();
-            int priority = 0;
-
-            // Add all selected items to a queue.
-            subtitleQueue.Enqueue("Selected subtitles:\n", priority);
-            priority++;
-            foreach (string item in selectedItems)
-            {
-                subtitleQueue.Enqueue(item, priority);
-                priority++;
-            }
-
-            // Add all items to a queue.
-            subtitleQueue.Enqueue("\nAll subtitles:\n", priority);
-            priority++;
-            foreach (string item in items)
-            {
-                subtitleQueue.Enqueue(item, priority);
-                priority++;
-            }
-            return subtitleQueue;
-        }
-        */
-
         internal static Queue<string> GetSubtitleQueue(ListBox.SelectedObjectCollection selectedItems, ListBox.ObjectCollection items)
         {
             Queue<string> subtitleQueue = new Queue<string>();

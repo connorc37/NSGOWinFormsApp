@@ -64,7 +64,6 @@ namespace NSGOWinFormsApp
         private void btnGetSubtitles_Click(object sender, EventArgs e)
         {
             // Add items to the queue and display them in the richTextBox.
-            // PriorityQueue<string, int> subtitleQueue = Logic.AddToQueue(listBox.SelectedItems, listBox.Items);
             Queue<string> subtitleQueue = Logic.GetSubtitleQueue(listBox1.SelectedItems, listBox1.Items);
             richTextBox1.Clear();
             while (subtitleQueue.Count > 0)
@@ -86,7 +85,6 @@ namespace NSGOWinFormsApp
         /// </summary>
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // OG Video & GIF links: https://www.screencast.com/t/ZVJummTb2ZV0, https://www.screencast.com/t/ytJoXR3k
             System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("https://youtu.be/ZxjZbvVSSG4") { UseShellExecute = true });
         }
     }
